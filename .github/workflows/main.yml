@@ -38,3 +38,5 @@ jobs:
         with:
           push: true
           tags: ${{ steps.login-ecr.outputs.registry }}/webapp:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,src=/tmp/.buildx-cache,mode=max
