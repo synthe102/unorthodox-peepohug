@@ -4,12 +4,12 @@ on:
   push:
     branches: [ master ]
     paths: 
-      - **/*.go
+      - '**.go'
       - Dockerfile
   pull_request:
     branches: [ master ]
     paths: 
-      - **/*.go
+      - '**.go'
       - Dockerfile
   workflow_dispatch:
 
