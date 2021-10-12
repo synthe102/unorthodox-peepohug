@@ -39,6 +39,8 @@ jobs:
       - name: Terraform Plan
         id: plan
         if: github.event_name == 'pull_request'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: terraform plan -no-color
         continue-on-error: true
 
@@ -72,4 +74,6 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: terraform apply -auto-approve
