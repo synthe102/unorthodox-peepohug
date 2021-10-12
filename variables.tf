@@ -1,19 +1,19 @@
 variable "custom_domain" {
-  type = string
+  type    = string
   default = "suslian.engineer"
 }
 
 variable "custom_subdomain" {
-  type = string
+  type    = string
   default = "webapp"
 }
 
 variable "container" {
-  type = string
+  type    = string
   default = "webapp"
 }
 
 variable "service_name" {
-  type = string
+  type    = string
   default = "webapp"
 }
