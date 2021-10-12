@@ -1,6 +1,7 @@
 FROM golang:1.17.1 as build
 ADD . /src
 WORKDIR /src
+RUN go test --cover -v ./...
 RUN CGO_ENABLED=0 go build -o webapp
 RUN chmod +x webapp
 
