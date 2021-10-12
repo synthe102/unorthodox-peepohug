@@ -30,7 +30,7 @@ resource "aws_apprunner_service" "webapp" {
 
 resource "aws_apprunner_auto_scaling_configuration_version" "webapp_autoscalling" {
   auto_scaling_configuration_name = var.service_name
-  max_concurrency                 = 5
+  max_concurrency                 = 1
   min_size                        = 2
   max_size                        = 2
 
