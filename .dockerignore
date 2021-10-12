@@ -1,4 +1,6 @@
 .git
 .github
+.terraform
+*.hcl
 *.tf
 *.md
